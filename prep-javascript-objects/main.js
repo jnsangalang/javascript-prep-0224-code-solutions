@@ -12,6 +12,6 @@ person.job = 'disaster';
 console.log("This person's job is:", person.job);
 
 person['previousJob'] = 'Occupational Therapy Assistant';
-console.log("This person's previous job was:", person.previousJob);
+console.log("This person's previous job was:", person['previousJob']);
 
 console.log('All information of this person:', person);
