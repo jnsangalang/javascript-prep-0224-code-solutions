@@ -54,30 +54,32 @@ function forInLoop1(object) {
   let i = 0;
   let newArray3 = [];
 
-  for (let i = 0; i < 1; i++) {
-    newArray3.push('name', 'age', 'hobby', 'invention');
+  for (let property in person) {
+    newArray3.push(property);
   }
   return newArray3;
   console.log(newArray3);
 }
 
-forInLoop1Result = forInLoop1();
+let person = {
+  name: 'Johan',
+  age: '30',
+  hobby: 'gym',
+  invention: 'fun',
+};
+
+forInLoop1Result = forInLoop1(person);
 console.log(forInLoop1Result);
 
 function forInLoop2(object) {
   let i = 0;
   let newArray4 = [];
-  let person = {
-    name: 'Johan',
-    age: '30',
-    hobby: 'gym',
-    invention: 'fun',
-  };
+
   for (let value in person) {
     newArray4.push(person[value]);
   }
   return newArray4;
 }
 
-let forInLoop2Result = forInLoop2();
+let forInLoop2Result = forInLoop2(person);
 console.log(forInLoop2Result);
